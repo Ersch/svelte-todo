@@ -1,0 +1,22 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1709661057310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1709661357224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,11 @@\n \t\t\"check\": \"svelte-kit sync && svelte-check --tsconfig ./tsconfig.json\",\n \t\t\"check:watch\": \"svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch\",\n \t\t\"lint\": \"prettier --check . && eslint .\",\n \t\t\"format\": \"prettier --write .\",\n-\t\t\"deploy\": \"pnpm build && pnpx gh-pages -d build -t true\"\n-\t},\n+\t\t\"predeploy\": \"npm run build\",\n+\t\t\"deploy\": \"gh-pages -d build\"\n+\t\t},\n \t\"devDependencies\": {\n \t\t\"@sveltejs/adapter-auto\": \"^3.0.0\",\n \t\t\"@sveltejs/kit\": \"^2.0.0\",\n \t\t\"@sveltejs/vite-plugin-svelte\": \"^3.0.0\",\n"
+                }
+            ],
+            "date": 1709661057310,
+            "name": "Commit-0",
+            "content": "{\n\t\"name\": \"svelte-todo\",\n\t\"version\": \"0.0.1\",\n\t\"private\": true,\n\t\"scripts\": {\n\t\t\"dev\": \"vite dev\",\n\t\t\"build\": \"vite build\",\n\t\t\"preview\": \"vite preview\",\n\t\t\"check\": \"svelte-kit sync && svelte-check --tsconfig ./tsconfig.json\",\n\t\t\"check:watch\": \"svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch\",\n\t\t\"lint\": \"prettier --check . && eslint .\",\n\t\t\"format\": \"prettier --write .\",\n\t\t\"deploy\": \"pnpm build && pnpx gh-pages -d build -t true\"\n\t},\n\t\"devDependencies\": {\n\t\t\"@sveltejs/adapter-auto\": \"^3.0.0\",\n\t\t\"@sveltejs/kit\": \"^2.0.0\",\n\t\t\"@sveltejs/vite-plugin-svelte\": \"^3.0.0\",\n\t\t\"@types/eslint\": \"8.56.0\",\n\t\t\"@typescript-eslint/eslint-plugin\": \"^6.0.0\",\n\t\t\"@typescript-eslint/parser\": \"^6.0.0\",\n\t\t\"eslint\": \"^8.56.0\",\n\t\t\"eslint-config-prettier\": \"^9.1.0\",\n\t\t\"eslint-plugin-svelte\": \"^2.35.1\",\n\t\t\"gh-pages\": \"^6.1.1\",\n\t\t\"prettier\": \"^3.1.1\",\n\t\t\"prettier-plugin-svelte\": \"^3.1.2\",\n\t\t\"svelte\": \"^4.2.7\",\n\t\t\"svelte-check\": \"^3.6.0\",\n\t\t\"tslib\": \"^2.4.1\",\n\t\t\"typescript\": \"^5.0.0\",\n\t\t\"vite\": \"^5.0.3\"\n\t},\n\t\"type\": \"module\"\n}\n"
+        }
+    ]
+}
