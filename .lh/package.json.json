@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1709661057310,
@@ -12,6 +12,10 @@
                 {
                     "date": 1709661357224,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,11 @@\n \t\t\"check\": \"svelte-kit sync && svelte-check --tsconfig ./tsconfig.json\",\n \t\t\"check:watch\": \"svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch\",\n \t\t\"lint\": \"prettier --check . && eslint .\",\n \t\t\"format\": \"prettier --write .\",\n-\t\t\"deploy\": \"pnpm build && pnpx gh-pages -d build -t true\"\n-\t},\n+\t\t\"predeploy\": \"npm run build\",\n+\t\t\"deploy\": \"gh-pages -d build\"\n+\t\t},\n \t\"devDependencies\": {\n \t\t\"@sveltejs/adapter-auto\": \"^3.0.0\",\n \t\t\"@sveltejs/kit\": \"^2.0.0\",\n \t\t\"@sveltejs/vite-plugin-svelte\": \"^3.0.0\",\n"
+                },
+                {
+                    "date": 1709662686670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,9 @@\n \t\t\"check\": \"svelte-kit sync && svelte-check --tsconfig ./tsconfig.json\",\n \t\t\"check:watch\": \"svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch\",\n \t\t\"lint\": \"prettier --check . && eslint .\",\n \t\t\"format\": \"prettier --write .\",\n-\t\t\"predeploy\": \"npm run build\",\n-\t\t\"deploy\": \"gh-pages -d build\"\n+\t\t\"gh-pages\": \"npm run build && npx gh-pages -d build\"\n \t},\n \t\"devDependencies\": {\n \t\t\"@sveltejs/adapter-auto\": \"^3.0.0\",\n \t\t\"@sveltejs/adapter-static\": \"^3.0.1\",\n"
                 }
             ],
             "date": 1709661057310,
