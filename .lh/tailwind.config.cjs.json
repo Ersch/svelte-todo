@@ -1,0 +1,30 @@
+{
+    "sourceFile": "tailwind.config.cjs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1709671874923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1709671890429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import { join } from 'path';\n+\n /** @type {import('tailwindcss').Config}*/\n const config = {\n \tcontent: [\n \t\t'./src/**/*.{html,js,svelte,ts}',\n"
+                },
+                {
+                    "date": 1709671901753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import { join } from 'path';\n+\n+/** @type {import('tailwindcss').Config}*/\n+const config = {\n+\tcontent: [\n+\t\t'./src/**/*.{html,js,svelte,ts}',\n+\t\t// 3. Append the path to the Skeleton package\n+\t\tjoin(require.resolve(\n+\t\t\t'@skeletonlabs/skeleton'),\n+\t\t\t'../**/*.{html,js,svelte,ts}'\n+\t\t)\n+\t],\n+\ttheme: {\n+\t\textend: {}\n+\t},\n+\n+\tplugins: [\n+\t\tskeleton\n+\t]\n+};\n+\n+module.exports = config;\n"
+                },
+                {
+                    "date": 1709671911987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { join } from 'path';\n+import { skeleton } from '@skeletonlabs/tw-plugin';\n \n /** @type {import('tailwindcss').Config}*/\n const config = {\n \tcontent: [\n@@ -19,24 +20,4 @@\n \t]\n };\n \n module.exports = config;\n-import { join } from 'path';\n-\n-/** @type {import('tailwindcss').Config}*/\n-const config = {\n-\tcontent: [\n-\t\t'./src/**/*.{html,js,svelte,ts}',\n-\t\t// 3. Append the path to the Skeleton package\n-\t\tjoin(require.resolve(\n-\t\t\t'@skeletonlabs/skeleton'),\n-\t\t\t'../**/*.{html,js,svelte,ts}'\n-\t\t)\n-\t],\n-\ttheme: {\n-\t\textend: {}\n-\t},\n-\n-\tplugins: []\n-};\n-\n-module.exports = config;\n"
+                }
+            ],
+            "date": 1709671874923,
+            "name": "Commit-0",
+            "content": "/** @type {import('tailwindcss').Config}*/\nconst config = {\n\tcontent: [\n\t\t'./src/**/*.{html,js,svelte,ts}',\n\t\t// 3. Append the path to the Skeleton package\n\t\tjoin(require.resolve(\n\t\t\t'@skeletonlabs/skeleton'),\n\t\t\t'../**/*.{html,js,svelte,ts}'\n\t\t)\n\t],\n\ttheme: {\n\t\textend: {}\n\t},\n\n\tplugins: []\n};\n\nmodule.exports = config;\n"
+        }
+    ]
+}

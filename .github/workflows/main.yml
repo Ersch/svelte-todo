@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+permissions:
+  contents: write
+  packages: write
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.1.1
+
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+          
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        with:
+          branch: gh-pages
+          folder: build

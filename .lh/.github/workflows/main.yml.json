@@ -1,0 +1,70 @@
+{
+    "sourceFile": ".github/workflows/main.yml",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 13,
+            "patches": [
+                {
+                    "date": 1709672703252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1709672739599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,34 +12,11 @@\n       - uses: actions/checkout@v2\n \n       - name: Install and Build\n         run: |\n-          name: Deploy to GitHub Pages\n-\n-on:\n-  push:\n-    branches: [ master ]\n-  workflow_dispatch:\n-\n-jobs:\n-  build:\n-    runs-on: ubuntu-latest\n-    steps:\n-      - uses: actions/checkout@v2\n-\n-      - name: Install and Build\n-        run: |\n-          npm install\n-          npm run build\n+          npm run gh-pages \n           \n       - name: Deploy to GitHub Pages\n         uses: JamesIves/github-pages-deploy-action@4.1.5\n         with:\n           branch: gh-pages\n           folder: public\n-          npm run build\n-          \n-      - name: Deploy to GitHub Pages\n-        uses: JamesIves/github-pages-deploy-action@4.1.5\n-        with:\n-          branch: gh-pages\n-          folder: public\n"
+                },
+                {
+                    "date": 1709673695012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n         run: |\n           npm run gh-pages \n           \n       - name: Deploy to GitHub Pages\n-        uses: JamesIves/github-pages-deploy-action@4.1.5\n+        uses: JamesIves/github-pages-deploy-action@4.5.0\n         with:\n           branch: gh-pages\n           folder: public\n"
+                },
+                {
+                    "date": 1709673753961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n         run: |\n           npm run gh-pages \n           \n       - name: Deploy to GitHub Pages\n-        uses: JamesIves/github-pages-deploy-action@4.5.0\n+        uses: JamesIves/github-pages-deploy-action@4.1.5\n         with:\n           branch: gh-pages\n           folder: public\n"
+                },
+                {
+                    "date": 1709673769851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,8 +15,8 @@\n         run: |\n           npm run gh-pages \n           \n       - name: Deploy to GitHub Pages\n-        uses: JamesIves/github-pages-deploy-action@4.1.5\n+        uses: JamesIves/github-pages-deploy-action@v4.5.0\n         with:\n           branch: gh-pages\n           folder: public\n"
+                },
+                {
+                    "date": 1709673841944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n jobs:\n   build:\n     runs-on: ubuntu-latest\n     steps:\n-      - uses: actions/checkout@v2\n+      - uses: actions/checkout@v4.1.1\n \n       - name: Install and Build\n         run: |\n           npm run gh-pages \n"
+                },
+                {
+                    "date": 1709674028596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n name: Deploy to GitHub Pages\n \n on:\n   push:\n-    branches: [ master ]\n+    branches: [ main ]\n   workflow_dispatch:\n \n jobs:\n   build:\n"
+                },
+                {
+                    "date": 1709674269067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,15 +8,16 @@\n jobs:\n   build:\n     runs-on: ubuntu-latest\n     steps:\n-      - uses: actions/checkout@v4.1.1\n+      - uses: actions/checkout@v2\n \n       - name: Install and Build\n         run: |\n-          npm run gh-pages \n+          npm install\n+          npm run build\n           \n       - name: Deploy to GitHub Pages\n-        uses: JamesIves/github-pages-deploy-action@v4.5.0\n+        uses: JamesIves/github-pages-deploy-action@V4.5.0\n         with:\n           branch: gh-pages\n           folder: public\n"
+                },
+                {
+                    "date": 1709674352682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n           npm install\n           npm run build\n           \n       - name: Deploy to GitHub Pages\n-        uses: JamesIves/github-pages-deploy-action@V4.5.0\n+        uses: JamesIves/github-pages-deploy-action@v4.5.0\n         with:\n           branch: gh-pages\n           folder: public\n"
+                },
+                {
+                    "date": 1709674433138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n jobs:\n   build:\n     runs-on: ubuntu-latest\n     steps:\n-      - uses: actions/checkout@v2\n+      - uses: actions/checkout@v4.1.1\n \n       - name: Install and Build\n         run: |\n           npm install\n"
+                },
+                {
+                    "date": 1709674583869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,5 @@\n       - name: Deploy to GitHub Pages\n         uses: JamesIves/github-pages-deploy-action@v4.5.0\n         with:\n           branch: gh-pages\n-          folder: public\n+          folder: build\n"
+                },
+                {
+                    "date": 1709675244963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n name: Deploy to GitHub Pages\n-\n+permissions:\n+  contents: read\n on:\n   push:\n     branches: [ main ]\n   workflow_dispatch:\n"
+                },
+                {
+                    "date": 1709675361154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n name: Deploy to GitHub Pages\n permissions:\n   contents: read\n+  packages: write\n on:\n   push:\n     branches: [ main ]\n   workflow_dispatch:\n"
+                },
+                {
+                    "date": 1709675690406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n name: Deploy to GitHub Pages\n permissions:\n-  contents: read\n+  contents: write\n   packages: write\n on:\n   push:\n     branches: [ main ]\n"
+                }
+            ],
+            "date": 1709672703252,
+            "name": "Commit-0",
+            "content": "name: Deploy to GitHub Pages\n\non:\n  push:\n    branches: [ master ]\n  workflow_dispatch:\n\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n\n      - name: Install and Build\n        run: |\n          name: Deploy to GitHub Pages\n\non:\n  push:\n    branches: [ master ]\n  workflow_dispatch:\n\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n\n      - name: Install and Build\n        run: |\n          npm install\n          npm run build\n          \n      - name: Deploy to GitHub Pages\n        uses: JamesIves/github-pages-deploy-action@4.1.5\n        with:\n          branch: gh-pages\n          folder: public\n          npm run build\n          \n      - name: Deploy to GitHub Pages\n        uses: JamesIves/github-pages-deploy-action@4.1.5\n        with:\n          branch: gh-pages\n          folder: public\n"
+        }
+    ]
+}
