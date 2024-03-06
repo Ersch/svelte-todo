@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/app.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1709745640899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1709745660507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,7 @@\n \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n \t\t%sveltekit.head%\n \t</head>\n \t<body data-sveltekit-preload-data=\"hover\">\n-\t\t<div class=\"bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%\" style=\"display: contents\">%sveltekit.body%</div>\n+\t\t<div style=\"display: contents\">%sveltekit.body%</div>\n \t</body>\n </html>\n"
+                },
+                {
+                    "date": 1709759185551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,11 @@\n \t\t<link rel=\"icon\" href=\"%sveltekit.assets%/favicon.png\" />\n \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n \t\t%sveltekit.head%\n \t</head>\n+\t<style>\n+\t\t@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap')\n+\t</style>\n \t<body data-sveltekit-preload-data=\"hover\">\n \t\t<div style=\"display: contents\">%sveltekit.body%</div>\n \t</body>\n </html>\n"
+                },
+                {
+                    "date": 1709759292781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,9 @@\n \t\t<link rel=\"icon\" href=\"%sveltekit.assets%/favicon.png\" />\n \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n \t\t%sveltekit.head%\n \t</head>\n-\t<style>\n-\t\t@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap')\n-\t</style>\n+\n \t<body data-sveltekit-preload-data=\"hover\">\n \t\t<div style=\"display: contents\">%sveltekit.body%</div>\n \t</body>\n </html>\n"
+                },
+                {
+                    "date": 1709759320107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,14 @@\n+<!doctype html>\n+<html lang=\"en\">\n+\t\n+\t<head>\n+\t\t<meta charset=\"utf-8\" />\n+\t\t<link rel=\"icon\" href=\"%sveltekit.assets%/favicon.png\" />\n+\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n+\t\t%sveltekit.head%\n+\t</head>\n+\n+\t<body data-sveltekit-preload-data=\"hover\">\n+\t\t<div style=\"display: contents\">%sveltekit.body%</div>\n+\t</body>\n+</html>\n"
+                },
+                {
+                    "date": 1709759338907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+<!doctype html>\n+<html lang=\"en\">\n+\t<head>\n+\t\t<meta charset=\"utf-8\" />\n+\t\t<link rel=\"icon\" href=\"%sveltekit.assets%/favicon.png\" />\n+\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n+\t\t%sveltekit.head%\n+\t</head>\n+\n+\t<body data-sveltekit-preload-data=\"hover\">\n+\t\t<div style=\"display: contents\">%sveltekit.body%</div>\n+\t</body>\n+</html>\n"
+                },
+                {
+                    "date": 1709759601626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,40 +1,18 @@\n <!doctype html>\n <html lang=\"en\">\n-\t<head>\n-\t\t<meta charset=\"utf-8\" />\n-\t\t<link rel=\"icon\" href=\"%sveltekit.assets%/favicon.png\" />\n-\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n-\t\t%sveltekit.head%\n-\t</head>\n \n-\t<body data-sveltekit-preload-data=\"hover\">\n-\t\t<div style=\"display: contents\">%sveltekit.body%</div>\n-\t</body>\n-</html>\n-<!doctype html>\n-<html lang=\"en\">\n-\t\n-\t<head>\n-\t\t<meta charset=\"utf-8\" />\n-\t\t<link rel=\"icon\" href=\"%sveltekit.assets%/favicon.png\" />\n-\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n-\t\t%sveltekit.head%\n-\t</head>\n+<head>\n+\t<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n+\t<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n+\t<link href=\"https://fonts.googleapis.com/css2?family=Lobster&display=swap\" rel=\"stylesheet\">\n+\t<meta charset=\"utf-8\" />\n+\t<link rel=\"icon\" href=\"%sveltekit.assets%/favicon.png\" />\n+\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n+\t%sveltekit.head%\n+</head>\n \n-\t<body data-sveltekit-preload-data=\"hover\">\n-\t\t<div style=\"display: contents\">%sveltekit.body%</div>\n-\t</body>\n-</html>\n-<!doctype html>\n-<html lang=\"en\">\n-\t<head>\n-\t\t<meta charset=\"utf-8\" />\n-\t\t<link rel=\"icon\" href=\"%sveltekit.assets%/favicon.png\" />\n-\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n-\t\t%sveltekit.head%\n-\t</head>\n+<body data-sveltekit-preload-data=\"hover\">\n+\t<div style=\"display: contents\">%sveltekit.body%</div>\n+</body>\n \n-\t<body data-sveltekit-preload-data=\"hover\">\n-\t\t<div style=\"display: contents\">%sveltekit.body%</div>\n-\t</body>\n-</html>\n+</html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1709761499711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,13 @@\n <head>\n \t<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n \t<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n \t<link href=\"https://fonts.googleapis.com/css2?family=Lobster&display=swap\" rel=\"stylesheet\">\n+\n+\t<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n+\t<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n+\t<link href=\"https://fonts.googleapis.com/css2?family=Lobster&family=Shrikhand&display=swap\" rel=\"stylesheet\">\n+\n \t<meta charset=\"utf-8\" />\n \t<link rel=\"icon\" href=\"%sveltekit.assets%/favicon.png\" />\n \t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n \t%sveltekit.head%\n"
+                }
+            ],
+            "date": 1709745640899,
+            "name": "Commit-0",
+            "content": "<!doctype html>\n<html lang=\"en\">\n\t<head>\n\t\t<meta charset=\"utf-8\" />\n\t\t<link rel=\"icon\" href=\"%sveltekit.assets%/favicon.png\" />\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n\t\t%sveltekit.head%\n\t</head>\n\t<body data-sveltekit-preload-data=\"hover\">\n\t\t<div class=\"bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%\" style=\"display: contents\">%sveltekit.body%</div>\n\t</body>\n</html>\n"
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1709671874923,
@@ -20,6 +20,18 @@
                 {
                     "date": 1709671911987,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { join } from 'path';\n+import { skeleton } from '@skeletonlabs/tw-plugin';\n \n /** @type {import('tailwindcss').Config}*/\n const config = {\n \tcontent: [\n@@ -19,24 +20,4 @@\n \t]\n };\n \n module.exports = config;\n-import { join } from 'path';\n-\n-/** @type {import('tailwindcss').Config}*/\n-const config = {\n-\tcontent: [\n-\t\t'./src/**/*.{html,js,svelte,ts}',\n-\t\t// 3. Append the path to the Skeleton package\n-\t\tjoin(require.resolve(\n-\t\t\t'@skeletonlabs/skeleton'),\n-\t\t\t'../**/*.{html,js,svelte,ts}'\n-\t\t)\n-\t],\n-\ttheme: {\n-\t\textend: {}\n-\t},\n-\n-\tplugins: []\n-};\n-\n-module.exports = config;\n"
+                },
+                {
+                    "date": 1709762917801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,22 @@\n \t\t\t'../**/*.{html,js,svelte,ts}'\n \t\t)\n \t],\n \ttheme: {\n-\t\textend: {}\n+\t\textend: {\n+\t\t\tgoogle: {\n+\t\t\t\t'text-gray': '#3c4043',\n+\t\t\t\t'button-blue': '#1a73e8',\n+\t\t\t\t'button-blue-hover': '#5195ee',\n+\t\t\t\t'button-dark': '#202124',\n+\t\t\t\t'button-dark-hover': '#555658',\n+\t\t\t\t'button-border-light': '#dadce0',\n+\t\t\t\t'logo-blue': '#4285f4',\n+\t\t\t\t'logo-green': '#34a853',\n+\t\t\t\t'logo-yellow': '#fbbc05',\n+\t\t\t\t'logo-red': '#ea4335',\n+\t\t\t  },\n+\t\t}\n \t},\n \n \tplugins: [\n \t\tskeleton\n"
+                },
+                {
+                    "date": 1709762943213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,22 +12,23 @@\n \t\t)\n \t],\n \ttheme: {\n \t\textend: {\n+\t\t  colors: {\n \t\t\tgoogle: {\n-\t\t\t\t'text-gray': '#3c4043',\n-\t\t\t\t'button-blue': '#1a73e8',\n-\t\t\t\t'button-blue-hover': '#5195ee',\n-\t\t\t\t'button-dark': '#202124',\n-\t\t\t\t'button-dark-hover': '#555658',\n-\t\t\t\t'button-border-light': '#dadce0',\n-\t\t\t\t'logo-blue': '#4285f4',\n-\t\t\t\t'logo-green': '#34a853',\n-\t\t\t\t'logo-yellow': '#fbbc05',\n-\t\t\t\t'logo-red': '#ea4335',\n-\t\t\t  },\n-\t\t}\n-\t},\n+\t\t\t  'text-gray': '#3c4043',\n+\t\t\t  'button-blue': '#1a73e8',\n+\t\t\t  'button-blue-hover': '#5195ee',\n+\t\t\t  'button-dark': '#202124',\n+\t\t\t  'button-dark-hover': '#555658',\n+\t\t\t  'button-border-light': '#dadce0',\n+\t\t\t  'logo-blue': '#4285f4',\n+\t\t\t  'logo-green': '#34a853',\n+\t\t\t  'logo-yellow': '#fbbc05',\n+\t\t\t  'logo-red': '#ea4335',\n+\t\t\t},\n+\t\t  },\n+\t\t},\n \n \tplugins: [\n \t\tskeleton\n \t]\n"
+                },
+                {
+                    "date": 1709762957270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,23 +12,24 @@\n \t\t)\n \t],\n \ttheme: {\n \t\textend: {\n-\t\t  colors: {\n-\t\t\tgoogle: {\n-\t\t\t  'text-gray': '#3c4043',\n-\t\t\t  'button-blue': '#1a73e8',\n-\t\t\t  'button-blue-hover': '#5195ee',\n-\t\t\t  'button-dark': '#202124',\n-\t\t\t  'button-dark-hover': '#555658',\n-\t\t\t  'button-border-light': '#dadce0',\n-\t\t\t  'logo-blue': '#4285f4',\n-\t\t\t  'logo-green': '#34a853',\n-\t\t\t  'logo-yellow': '#fbbc05',\n-\t\t\t  'logo-red': '#ea4335',\n+\t\t\tcolors: {\n+\t\t\t\tgoogle: {\n+\t\t\t\t\t'text-gray': '#3c4043',\n+\t\t\t\t\t'button-blue': '#1a73e8',\n+\t\t\t\t\t'button-blue-hover': '#5195ee',\n+\t\t\t\t\t'button-dark': '#202124',\n+\t\t\t\t\t'button-dark-hover': '#555658',\n+\t\t\t\t\t'button-border-light': '#dadce0',\n+\t\t\t\t\t'logo-blue': '#4285f4',\n+\t\t\t\t\t'logo-green': '#34a853',\n+\t\t\t\t\t'logo-yellow': '#fbbc05',\n+\t\t\t\t\t'logo-red': '#ea4335',\n+\t\t\t\t},\n \t\t\t},\n-\t\t  },\n-\t\t},\n+\t\t}\n+\t},\n \n \tplugins: [\n \t\tskeleton\n \t]\n"
                 }
             ],
             "date": 1709671874923,
